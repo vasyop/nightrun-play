@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NIGHTRUN</title>
+    <link rel="icon" href="./favicon.svg" />
+    <!-- Spec fonts (HUD_UI_SPEC §1). Loaded non-blocking (print -> all swap) with display=swap, so an
+         offline or slow network never delays boot; the system stack in base.css covers the gap.
+         Tektur is requested without the wdth axis: its range is 75..100, and the spec URL's 100..125
+         makes Google drop the family silently. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link id="nr-fonts" rel="stylesheet" media="print" onload="this.media='all'" onerror="this.dataset.failed='1'"
+      href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..700&family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;1,600;1,700&family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;0,700;1,600&family=Chakra+Petch:ital,wght@0,600;1,600&display=swap" />
+    <style>
+      html, body {
+        margin: 0; height: 100%; background: #000; overflow: hidden;
+        font-family: 'Avenir Next Condensed', 'DIN Condensed', 'Bahnschrift', 'Roboto Condensed', 'Arial Narrow', sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      #app { position: fixed; inset: 0; }
+      #ui { position: fixed; inset: 0; pointer-events: none; z-index: 10; }
+      canvas { display: block; outline: none; }
+    </style>
+    <script type="module" crossorigin src="./assets/index-Vziu8YF7.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/vendor-three-BRrYN9h0.js">
+    <link rel="modulepreload" crossorigin href="./assets/vendor-post-DFJYAJ9P.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-CxiKdP3C.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="ui"></div>
+  </body>
+</html>

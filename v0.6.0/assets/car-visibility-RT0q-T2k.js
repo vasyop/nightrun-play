@@ -1,0 +1,1 @@
+function r(i){if(i.isLight)return!0;for(const e of i.children)if(r(e))return!0;return!1}function n(i,e){for(const t of i.children)t.isLight||(r(t)?n(t,e):t.visible=e)}function o(i,e){const t=i.root;t.visible=!0,n(t,e)}export{o as s};
